@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 import Contact from '../pages/Contact/index'
 import Activities from '../pages/Activities'
 import Footer from './Footer'
+import ConceptionTravail from './ConceptionTravail'
 
 function App() {
   const GloblaStyle = createGlobalStyle`
@@ -17,6 +18,7 @@ function App() {
       <GloblaStyle />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/conception-travail" element={<ConceptionTravail />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/nos-activités" element={<Activities />} />
       </Routes>

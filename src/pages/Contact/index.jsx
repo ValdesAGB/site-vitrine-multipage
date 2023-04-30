@@ -5,60 +5,67 @@ function Contact() {
   return (
     <React.Fragment>
       <section className="row p-5 " style={{ backgroundColor: '#f7f9f8' }}>
-        <div className="container p-5 ">
+        <div className="container p-0 p-md-5 ">
           <h1 className="fw-bold">Contacez-nous</h1>
           <div className="row align-items-center">
-            <div className="col-6 ">
-              <p>
+            <div className="col-12 col-md-6 mb-5 mb-md-0 ">
+              <p className="mt-3 mt-md-0 text-center text-md-start">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
                 minima, dignissimos corporis cum sint saepe quisquam delectus,
-                quam culpa rerum nihil dicta. Architecto alias accusantium,
-                soluta natus consectetur possimus temporibus.
+                quam culpa rerum nihil dicta.
+                <br />
+                <br />
+                Architecto alias accusantium, soluta natus consectetur possimus
+                temporibus.
               </p>
-              <div className="row my-4">
+              <div className="row my-4 ">
                 {networks.map(({ id, icone }) => (
-                  <i className={`col-1 fs-3 bi ${icone}`} key={id}></i>
+                  <i
+                    className={`col col-md-2 col-xl-1 fs-3 bi ${icone}`}
+                    key={id}
+                  ></i>
                 ))}
               </div>
               <div>
                 {contactElements.map(({ id, title, text }) => (
-                  <div>
+                  <div key={id}>
                     <h5 className="fw-bold">{title}</h5>
-                    <p className="col-6">{text}</p>
+                    <p className="col-12 col-md-6">{text}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <form>
-                <div class="mb-3 row">
+                <div className="mb-3 row">
                   <div className="col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
                       Nom*
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                     />
                   </div>
 
                   <div className="col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                    <label htmlFor="exampleInputEmail1" className="form-label">
                       Mail*
                     </label>
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputEmail1"
                       aria-describedby="emailHelp"
                     />
                   </div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">
+
+                <div className="mb-2">
+                  <label htmlFor="exampleInputPassword1" className="form-label">
                     Sujet
                   </label>
                   <textarea
@@ -68,10 +75,10 @@ function Contact() {
                     rows="10"
                   ></textarea>
                 </div>
-
+                <div className="mb-3">* important</div>
                 <button
                   type="submit"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   onClick={(e) => {
                     e.preventDefault()
                   }}

@@ -15,14 +15,14 @@ function Accueil() {
     <React.Fragment>
       <Section className="py-5">
         <div className="row justify-content-end my-5">
-          <div className="col-5 text-end me-5">
+          <div className="col-10 col-md-5 text-end me-0 me-md-5">
             <h1 className="fw-bold text-end">
               Nous aidons les entreprises à se développer en créant des sites
               Web de haute qualité
             </h1>
             <Link
               to="/nos-activit%C3%A9s"
-              className="btn border-white fw-bold border border-5 rounded-5 p-3 text-end mt-3 text-white"
+              className="btn border-white fw-bold border border-5 rounded-5 p-1 p-md-3 text-md-end mt-3 text-white"
             >
               APPRENDRE ENCORE PLUS
             </Link>
